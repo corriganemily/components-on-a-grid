@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  line-height: 1.5;
+  font-family: Georgia, serif;
 }
 
 *,
@@ -13,6 +15,20 @@ img {
 }
 
 header {
-  /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
-  display: contents;
+  display: grid;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo img {
+  grid-column: 1/-1;
+  grid-row: 1/-1
+}
+
+.pano img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
