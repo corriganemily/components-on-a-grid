@@ -15,7 +15,32 @@ img {
 }
 
 header {
+  display: contents;
+  grid-area: header;
+  grid-column: 1 / 3;
+  grid-row: 1 / -1;
+}
+
+body {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "header header"
+    "figure figure";
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  grid-area: figure;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul {
+  display: flex;
+
 }
 
 dl {
@@ -23,12 +48,12 @@ dl {
   grid-template-columns: 1fr 1fr;
 }
 
-.logo img {
-  grid-column: 1/-1;
-  grid-row: 1/-1
+.logo {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 
-.pano img {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
+.pano {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
